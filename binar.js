@@ -17,8 +17,10 @@ function binary_search(list,item){
 
 	}
 	return " ваше число не найдено";
-}
-
+};
+  function sortNumber(a,b) {
+        return a - b;
+    };
 
 
 let size = prompt("Введите размер массива");
@@ -28,7 +30,8 @@ for( i = 0; i < size; i++){
 }
 
 let chislo = prompt("Введите искомое число");
-
+arr.sort(sortNumber);
+console.log(arr);
 let otvetIndex = (binary_search(arr,chislo));
 let otvetChislo = arr[otvetIndex];
 
